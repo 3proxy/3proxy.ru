@@ -1,0 +1,6 @@
+#define Title "Плагин аутентификации Windows для 3proxy"
+#include "../../include/intro.html"
+
+#include "../../doc/html/plugins/WindowsAuthentication.ru.html"
+
+#include "../../include/postpage.html"

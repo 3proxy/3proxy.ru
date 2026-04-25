@@ -1,0 +1,6 @@
+#define Title "Плагин коррекции траффика 3proxy"
+#include "../../include/intro.html"
+
+#include "../../doc/html/plugins/TrafficPlugin.ru.html"
+
+#include "../../include/postpage.html"

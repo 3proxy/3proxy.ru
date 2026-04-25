@@ -1,0 +1,6 @@
+#define Title "Плагин регулярных выражений совместимых с Perl (PCRE) для 3proxy"
+#include "../../include/intro.html"
+
+#include "../../doc/html/plugins/PCREPlugin.ru.html"
+
+#include "../../include/postpage.html"

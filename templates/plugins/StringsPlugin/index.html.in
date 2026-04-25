@@ -1,0 +1,6 @@
+#define Title "Плагин подмены строк 3proxy"
+#include "../../include/intro.html"
+
+#include "../../doc/html/plugins/StringsPlugin.ru.html"
+
+#include "../../include/postpage.html"

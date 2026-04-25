@@ -1,0 +1,378 @@
+P
+{
+    COLOR: black;
+    FONT-FAMILY: calibri;
+    FONT-SIZE: 10pt;
+}
+
+UL
+{
+    COLOR: black;
+    FONT-FAMILY: calibri;
+    FONT-SIZE: 10pt;
+}
+
+TD
+{
+    COLOR: black;
+    FONT-FAMILY: calibri;
+    FONT-SIZE: 10pt;
+}
+
+DIV.invert
+{
+    COLOR: white;
+    BGCOLOR: black;
+}
+
+LI.web
+{
+    COLOR: black;
+    FONT-FAMILY: calibri;
+    LIST-STYLE: url(../images/bullets/web.gif)
+}
+
+LI.article
+{
+    COLOR: black;
+    FONT-FAMILY: calibri;
+    LIST-STYLE: url(../images/bullets/article.gif)
+}
+
+LI.exp
+{
+    COLOR: black;
+    FONT-FAMILY: calibri;
+    LIST-STYLE: url(../images/bullets/key.gif)
+}
+
+LI.lock
+{
+    COLOR: black;
+    FONT-FAMILY: calibri;
+    LIST-STYLE: url(../images/bullets/lock.gif)
+}
+
+LI.info
+{
+    COLOR: black;
+    FONT-FAMILY: calibri;
+    LIST-STYLE: url(../images/bullets/info.gif)
+}
+
+LI.source
+{
+    COLOR: black;
+    FONT-FAMILY: calibri;
+    LIST-STYLE: url(../images/bullets/book.gif)
+}
+
+LI.alert
+{
+    COLOR: black;
+    FONT-FAMILY: calibri;
+    LIST-STYLE: url(../images/bullets/exclam.gif)
+}
+
+LI.type
+{
+    COLOR: black;
+    FONT-FAMILY: calibri;
+    LIST-STYLE: url(../images/bullets/type.gif)
+}
+
+LI.st
+{
+    COLOR: black;
+    FONT-FAMILY: calibri;
+    LIST-STYLE: url(../images/bullets/standard.gif)
+}
+
+LI.os
+{
+    COLOR: black;
+    FONT-FAMILY: calibri;
+    LIST-STYLE: url(../images/bullets/os.gif)
+}
+
+LI.design
+{
+    COLOR: black;
+    FONT-FAMILY: calibri;
+    LIST-STYLE: url(../images/bullets/design.gif)
+}
+
+LI.host
+{
+    COLOR: black;
+    FONT-FAMILY: calibri;
+    LIST-STYLE: url(../images/bullets/sandy.gif)
+}
+
+LI
+{
+    list-style-image: none;
+    COLOR: black;
+    FONT-FAMILY: calibri;
+}
+
+A
+{
+    COLOR: #004040;
+    FONT-FAMILY: calibri;
+    FONT-SIZE: 10pt;
+    TEXT-DECORATION: none
+}
+
+A:visited
+{
+    COLOR: #004040;
+    FONT-FAMILY: calibri;
+    FONT-SIZE: 10pt;
+    TEXT-DECORATION: none;
+}
+
+A:active
+{
+    FONT-FAMILY: calibri;
+    FONT-SIZE: 10pt;
+    TEXT-DECORATION: underline
+}
+
+A:hover
+{
+    COLOR: #EEEEEE;
+    FONT-FAMILY: calibri;
+    FONT-SIZE: 10pt;
+    TEXT-DECORATION: none
+}
+
+
+TABLE
+{
+    BORDER: 0;
+    COLOR: black;
+    FONT-FAMILY: calibri;
+    FONT-SIZE: 10pt
+}
+
+
+.fixed {
+font-size: 12px;
+FONT-FAMILY: courier;
+}
+
+A.fixed {
+font-size: 12px;
+FONT-FAMILY: courier;
+color: #004040;
+}
+
+A:hover.fixed {
+font-size: 12px;
+FONT-FAMILY: courier;
+text-decoration: underline;
+color: teal;
+}
+
+A:visited.fixed {
+font-size: 12px;
+FONT-FAMILY: courier;
+color: #004040;
+}
+
+.tiny {
+font-size: 10px;
+}
+
+.rtiny {
+font-size: 10px;
+color: #c0c0c0;
+}
+
+A.rtiny {
+font-size: 10px;
+color: #c0c0c0;
+}
+
+A:visited.rtiny {
+font-size: 10px;
+color: #c0c0c0;
+}
+
+A:hover.rtiny {
+font-size: 10px;
+color: #c0c0c0;
+}
+
+
+.btiny {
+font-size: 10px;
+color: black;
+}
+
+A.btiny {
+font-size: 10px;
+color: black;
+}
+
+A:visited.btiny {
+font-size: 10px;
+color: black;
+}
+
+A:hover.btiny {
+font-size: 10px;
+color: white;
+}
+
+.tiny {
+font-size: 10px;
+}
+
+
+A.tiny{
+font-size: 10px;
+text-decoration: none;
+color: Teal;
+}
+
+A:hover.tiny{
+font-size: 10px;
+text-decoration: underline;
+color: Teal;
+}
+
+A:visited.tiny{
+font-size: 10px;
+color: Teal;
+}
+
+li.tiny {
+font-size: 10px;
+color: Black;
+}
+
+.hm {
+	font-family: calibri;
+	font-size: 20px;
+	color: #C8C8C8;
+	font-weight: bold;
+}
+
+.hms {
+	font-family: calibri;
+	font-size: 15px;
+	color: #C8C8C8;
+	font-weight: bold;
+}
+
+.normal {
+	font-family: calibri;
+	font-size: 10pt;
+	color: Black;
+}
+
+a.normal {
+	text-decoration: none;
+}
+
+a:hover.normal {
+	text-decoration: underline;
+	color: Black;
+}
+
+.small {
+	font-family: calibri;
+	font-size: 10px;
+	color: Black;
+}
+
+a.small {
+	text-decoration: none;
+	font-size: 10px;
+	font-weight: normal;
+}
+a:active.small {
+	text-decoration: none;
+	font-size: 10px;
+	font-weight: normal;
+	Color: white;
+}
+a:visited.small {
+	text-decoration: none;
+	font-size: 10px;
+	font-weight: normal;
+}
+
+a:hover.small {
+	text-decoration: underline;
+	font-size: 10px;
+	color: white;
+}
+
+.menu {
+	font-family: calibri;
+	font-size: 12px;
+	color: #C8C8C8;
+}
+
+h3.menu {
+	font-family: calibri;
+	font-size: 14px;
+	color: #C8C8C8;
+}
+
+h2.menu {
+	font-family: calibri;
+	font-size: 15px;
+	color: #C8C8C8;
+}
+
+h1.menu {
+	font-family: calibri;
+	font-size: 20px;
+	color: #C8C8C8;
+}
+
+a.menu {
+	font-family: calibri;
+	font-weight: normal;
+	font-size: 12px;
+	color: #C8C8C8;
+	text-decoration: none;
+}
+
+a:visited.menu {
+	font-family: calibri;
+	font-size: 12px;
+	color: #C8C8C8;
+}
+
+a:hover.menu {
+	font-family: calibri;
+	font-size: 12px;
+	color: White;
+}
+
+a:active.menu {
+	font-family: calibri;
+	font-size: 12px;
+	color: White;
+}
+
+.forum {
+	font-family: calibri;
+	font-size: 12px;
+	color: Black;
+}
+
+BODY {
+    SCROLLBAR-FACE-COLOR: black; 
+    SCROLLBAR-HIGHLIGHT-COLOR: silver
+    SCROLLBAR-SHADOW-COLOR: silver; 
+    SCROLLBAR-3DLIGHT-COLOR: darkgray; 
+    SCROLLBAR-ARROW-COLOR: white;
+    SCROLLBAR-TRACK-COLOR: darkgrey; 
+    SCROLLBAR-DARKSHADOW-COLOR: lightdarkgrey;
+}
