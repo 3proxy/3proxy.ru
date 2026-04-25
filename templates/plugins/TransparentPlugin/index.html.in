@@ -1,6 +1,6 @@
 #define Title "Плагин SSL/TLS для 3proxy"
 #include "../../include/intro.html"
 
-#include "../../doc/html/plugins/TransparentPlugin.ru.html"
+#include "../../../3proxy/doc/html/plugins/TransparentPlugin.ru.html"
 
 #include "../../include/postpage.html"
