@@ -1,0 +1,122 @@
+{% set Title = "3proxy - маленький бесплатный proxy сервер для Windows, Linux, Unix: SOCKS, HTTP, FTP proxy" %}
+{% include "include/intro.html" %}
+ <h2>3proxy tiny free proxy server</h2>
+
+<br>
+<table border="1">
+<tr><td>Новости:</td><td bgcolor="white">
+	<a href="//3proxy.ru/download/">3proxy 0.9.6</a>  Вышел 11 Апреля 2026.
+</td></tr><tr><td colspan="2" bgcolor="white">
+<b>0.9.6</b>
+<p>+ В SSLPlugin добавлены ssl_client и множество опций конфигурации, код SSLPlugin значительно улучшен и исправлен. См. https://github.com/3proxy/3proxy/wiki/SSLPlugin. 3proxy теперь может использоваться как замена stunnel во многих сценариях.
+<p>+ Поддержка прокси-протокола HAProxy v1 на стороне клиента и сервера. Добавлена опция -H для сервиса, чтобы ожидать заголовок прокси-протокола HA v1. Используйте тип родителя ha: parent 1000 ha 0.0.0.0 0 для отправки заголовка v1.
+<p>+ tlspr поддерживается в режиме auto
+<p>+ tlspr поддерживает опцию -s, которая разбивает HELLO-пакет для предотвращения обнаружения SNI некоторыми DPI
+<p>+ Добавлена опция конфигурации maxseg и поддержка флага сокета TCP_MAXSEG. Устанавливает максимальный размер TCP-сегмента для решения проблем с обнаружением PathMTU
+<p>+ Добавлены опции -Ne / -Ni для указания внешнего/внутреннего NAT-адреса для SOCKSv5
+<p>+ Добавлено окружение cmake
+<p>! Внешняя библиотека pcre2 (pcre2-8) используется для PCRE, код pcre удалён из 3proxy
+<p>! Множество мелких исправлений ошибок
+<p>
+<b>0.9.5</b>
+<p>!!Фикс безопасности: потенциальный креш при обработке запроса из-за перекрывающихся регионов в strcpy()
+<br>+ Новый тип сервиса прокси: tlspr - SNI proxy, может быть так же использован в виде parent с типом tls, достает имя хоста из TLS хендшейка, <a href="/doc/man8/tlspr.8.html">документация</a>
+<br>+ Новый тип прокси: auto - автоматически выбирает между socks и proxy по запросу клиента
+<br>+ SSLPlugin полностью переписан доведен до статуса production-ready, поддерживает TLS (SSL) server (можно использовать для создания прокси типа https:// ), умеет проверять сертификаты, <a href="/plugins/SSLPlugin/">документация</a>
+<br>+ Добавлена опция -g (grace) для разгрузки процессара при высоких нагрузках, <a href="/highload.html">документация</a>
+<br>! Множество более мелких фиксов
+<br>+ Новые поддерживаемые опции на сокеты
+
+<p>
+<b>0.9.4</b>
+<p>! Fix: invalid handling of '-' character in ACL hostname
+<br>! Fix: minor bugfixes and improvements
+<br>+ parentretry command added (defaults to 2) to retry connections to parent proxies
+<br>- icqpr related code (OSCAR proxy) removed, due to drop of OSCAR support by messengers
+<p>
+<b>0.9.3</b>
+<p>
+Bugfixes:
+<br>Fixed: systemd description file (proxy may fail to start after reboot or via systemctl)
+<br>Fixed: group/account creation in installation scripts
+<br>Fixed: countall/nocounall do not work in some configurations
+<br>Fixed: counters do not work if counter file is not specified
+<br>Fixed: counters without rotation (type N) are incorrectly shown in web admin interface
+<br>Fixed: %n may be incomplete or missed in long log records
+<br>Fixed: connect back functionality does not work
+<br>
+<br>Improvements:
+<br>+ Docker builds
+<p>
+<b>0.9.2</b>
+<p>
+Bugfixes:
+<br>Fixed: bandwidth limiters (once again)
+<br>Fixed: data filtering plugins (PCREPlugin, SSLPlugin). SSLPlugin use on Linux requires to disable splice (-s0)
+<br>FIxed: standalone proxies do not react on HUP (Ctrl+C) in Linux/Unix
+<br>Fixed: few minor bugs
+<br>
+<br>Improvements:
+<br>+ deb for arm platforms (experimental)
+<br>+ Openssl 1.1 support for SSLPlugin
+<p>
+
+<b>0.9.1 - bugfix release</b>
+<p>
+Пофикшены ошибки:
+<br>Fixed: сокет может быть закрыт до чтения/отравки всех данных
+<br>Fixed: не работает bandlimin
+<br>Fixed: пофикшена работа countall/nocountall
+<br>Fixed: устранено несколько race conditions
+<p>
+В версии 0.9 реализованы опции сокетов, в т.ч. привязка к интерфейсам в Linux/Unix, ограничения по соединениям и рейтлимитам соединений, реализован режим zero-copy под Linux, возможность
+запретить одновременный вход пользователем с нескольких IP, улучшена поддержка IPv6, реализована предварительная поддержка RADIUS, поддержана платформа ARM на Windows. 
+Ветка 0.9 рекомендована для обновления всех более старых релизов.
+<p>  
+Ветка  0.9 считается стабильной, разработка
+ ведется в ветке 10. Ветка 0.8 больше не поддерживается, за исключением
+ исправлений, связанных с безопасностью.
+<p>
+ Загрузить: <a href="//3proxy.ru/download/">http://3proxy.ru/download/</a>
+<p> 
+</td></tr>
+</table>
+
+	3proxy это маленький многоплатформный набор прокси-серверов (под
+	Linux/Unix и Windows, включая 64-битные версии).
+<p>	Он включает в себя HTTP прокси с поддержкой HTTPS и FTP
+	(proxy/proxy.exe), SOCKSv4/SOCKSv4.5/SOCKSv5 прокси (socks/socks.exe), 
+        POP3 прокси (pop3p/pop3p.exe), SMTP прокси (smtpp/smtpp.exe),
+	AIM/ICQ прокси (icqpr/icqpr.exe), MSN messenger / Live messenger proxy
+	(msnpr/msnpr.exe),
+	FTP proxy, кэширующий DNS прокси, TCP и UDP портмапперы (tcppm, udppm)
+        а так же комбинированный прокси-сервер с поддержкой дополнительных
+	возможностей, таких как управление доступом, ограничение ширины 
+	потребляемого канала, ограничение трафика на день, неделю и месяц,
+	перенаправление соединений,
+	построение цепочек соединений (proxy chaining), ротацию лог-файлов,
+	ведение журналов через	ODBC и syslog  и т.д. (3proxy).
+<p>	Он создан в рассчете на то, чтобы быть маленьким и простым и в то же время функциональным.
+	Он может быть скомпилирован как с помощью Visual C так и с помощью
+	gcc. Версия под Win32/Win64 использует родные библиотеки (т.е. не требуется
+	Cygwin или другие POSIX-эмуляторы), поддерживается установка в качестве
+	сервиса. На сегодняшний день работоспособность проверена на
+	Windows начиная с 98 (для Windows до Vista требуется версия lite) и
+        заканчивая последними версиями,
+	FreeBSD/i386/x64, NetBSD/i386/x64, OpenBSD/i386/x64, Linux/i386/x64/arm/PPC/Alpha, Mac OS X, Solaris/i386/x64.
+<p>	3proxy является FreeWare и может быть использован по лицензии GNU/GPL
+	или под собственной лицензией. Начиная с версии 0.6 Используется лицензия
+	типа BSD, позволяющая, так же, использовать LGPL, Apache License и многие
+	другие совместимые типы лицензирования.
+<p>	По вопросам лицензирования и коммерческой поддержки пишите
+	<A HREF="mailto:3proxy@3proxy.ru" class="tiny">3proxy@3proxy.ru</A>
+
+<p>
+Contributors:
+<ul>
+	<li>3APA3A, 3APA3A at 3proxy.ru, code developer
+	<li>Vladimir Dubrovin, vlad at securityvulns.ru, code developer
+</ul>
+<p>
+
+{% include "include/postpage.html" %}
